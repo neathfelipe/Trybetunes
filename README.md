@@ -1,6 +1,85 @@
+##### To read in English
+<details>
+
+# TrybeTunes
+
+TrybeTunes is an application that allows users to play music from various artists and bands, create a list of favorite songs, and edit their profiles. Through this application, you will have access to several interesting features, providing a unique musical experience.
+
+## Access the project online
+
+You can also access TrybeTunes online through the following link: [TrybeTunes](http://link-to-your-online-project)
+
+## Features
+
+Here are the main features you will find in TrybeTunes:
+
+- **Login**: Users can log in to the application to access all personalized features.
+
+- **Search for Artists and Bands**: You can search for a specific artist or band to discover which albums are available.
+
+- **Album Listing**: After the search, the application will display the available albums from the chosen artist or band.
+
+- **Song Preview**: When selecting an album, you can view all the songs included in that album and listen to a preview of each song.
+
+- **Favorite and Unfavorite Songs**: Users have the option to mark their favorite songs or remove them from favorites.
+
+- **List of Favorite Songs**: Users can access a list containing all the songs they have favorited.
+
+- **User Profile**: Users can view their profile to see personal information.
+
+- **Profile Editing**: Users can edit their profile to update their information.
+
+## Skills Used
+
+During the development of TrybeTunes, the following skills were employed:
+
+- Making requests and consuming data from an API.
+
+- Using the `useEffect` hook to handle side effects in asynchronous operations.
+
+- Managing application state using the `useState` hook.
+
+- Implementing a routing system using the `BrowserRouter` component for page navigation.
+
+- Mapping URLs to corresponding components using the `Route` component.
+
+- Creating navigation links in the application using the `Link` component to improve the user experience.
+
+## Project Images
+<details>
+
+#### Login
+![Login](/public/login.png)
+
+#### Albums
+![Albums](/public/albums.png)
+
+#### Song List
+![Songs](/public/songs.png)
+
+#### Favorite Songs
+![Favorites Songs](/public/favorites.png)
+
+#### Profile
+![Profile](/public/profile.png)
+
+#### Edit Profile
+![Profile Edit](/public/profile-edit.png)
+
+#### Not Found
+![Not found](/public/notfound.png)
+
+</details>
+
+</details>
+
 # TrybeTunes
 
 O TrybeTunes é uma aplicação que permite aos usuários reproduzirem músicas de diversos artistas e bandas, criar uma lista de músicas favoritas e editar seus perfis. Através desta aplicação, você terá acesso a várias funcionalidades interessantes, proporcionando uma experiência musical única.
+
+## Acesse o projeto online
+
+Você também pode acessar o TrybeTunes online através do seguinte link: [TrybeTunes](http://link-do-seu-projeto-online) 
 
 ## Funcionalidades
 
@@ -40,6 +119,28 @@ Durante o desenvolvimento do TrybeTunes, foram empregadas as seguintes habilidad
 
 - Criar links de navegação na aplicação utilizando o componente `Link` para melhorar a experiência do usuário.
 
-## Acesse o projeto online
+## Imagens do Projeto 
+<details>
 
-Você também pode acessar o TrybeTunes online através do seguinte link: [TrybeTunes Online](http://link-do-seu-projeto-online) 
+#### Login
+![Login](/public/login.png)
+
+#### Álbuns
+![Álbuns](/public/albums.png)
+
+#### Lista de Musicas
+![Songs ](/public/songs.png)
+
+#### Musicas Favoritas
+![Favorites Songs](/public/favorites.png)
+
+#### Perfil
+![Profile](/public/profile.png)
+
+#### Editar Perfil
+![Profile Edit](/public/profile-edit.png)
+
+#### Não encontrado
+![Not found](/public/notfound.png)
+
+</details>
