@@ -1,9 +1,10 @@
-import { ChangeEvent, FormEvent, useEffect, useState } from 'react';
+import { ChangeEvent, FormEvent, useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getUser, updateUser } from '../../services/userAPI';
 import { UserType } from '../../types';
 import Loading from '../Loading';
 import './profileEdit.css';
+import UserContext from '../../context/UserContext';
 
 const imageDefault = '/src/images/user.png';
 const initialState = {
@@ -17,6 +18,7 @@ export default function ProfileEdit() {
   const [loading, setLoading] = useState<boolean>(false);
   const [userInfo, setUserInfo] = useState<UserType>(initialState);
   const [inputInfo, setInputInfo] = useState(initialState);
+  const { setUser, user } = useContext(UserContext);
 
   const navigate = useNavigate();
 
@@ -33,6 +35,7 @@ export default function ProfileEdit() {
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setLoading(true);
+    setUser(inputInfo)
     await updateUser(inputInfo);
     navigate('/profile');
     setLoading(false);
@@ -41,7 +44,7 @@ export default function ProfileEdit() {
   useEffect(() => {
     const getInfo = async () => {
       setLoading(true);
-      const user = await getUser();
+      // const userLocalStorage = await getUser();
       setLoading(false);
       setUserInfo(user);
       setInputInfo(user);

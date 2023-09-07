@@ -1,4 +1,6 @@
+import { useContext } from 'react';
 import { UserType } from '../types';
+import UserContext from '../context/UserContext';
 
 const USER_KEY = 'user';
 const TIMEOUT = 1500;
@@ -28,8 +30,9 @@ export const getUser = (): Promise<UserType> => new Promise((resolve) => {
   simulateRequest(user)(resolve);
 });
 
-export const createUser = (user: UserType | { name: string })
+export const createUser = (user: UserType)
 : Promise<'OK'> => new Promise((resolve) => {
+
   const emptyUser = {
     name: '',
     email: '',

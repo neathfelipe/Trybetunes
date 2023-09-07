@@ -18,12 +18,12 @@
   padding: 5%;
 }
 
-.notfound h1 {
+h1 {
   margin: 0;
   font-size: 5em;
 }
 
-.notfound p {
+p {
   margin: 0;
   font-size: 1.3em;
   text-align: center;
@@ -41,7 +41,8 @@
     font-size: 2em;
   }
 
-  .notfound h1 {
+  .notfound  h1 {
     font-size: 8em;
   }
+
 }

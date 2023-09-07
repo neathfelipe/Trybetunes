@@ -1,26 +1,27 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { getUser } from '../../services/userAPI';
 import Loading from '../Loading';
 import './header.css';
+import UserContext from '../../context/UserContext';
 
 export default function Header() {
   const [user, setUser] = useState<string>('');
   const [loading, setLoading] = useState(false);
   const [imageProfile, setImageProfile] = useState<string>('');
+  const data = useContext(UserContext);
 
   useEffect(() => {
     async function getUsername() {
       setLoading(true);
-      const username = await getUser();
+      // const username = await getUser();
       setLoading(false);
-      setUser(username.name);
-      if (username.image !== '') {
-        setImageProfile(username.image);
+      setUser(data.user.name);
+      if (data.user.image !== '') {
+        setImageProfile(data.user.image);
       }
     }
     getUsername();
-  }, []);
+  }, [data.user]);
 
   return (
     <header data-testid="header-component" className="header">

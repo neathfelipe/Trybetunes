@@ -1,20 +1,22 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { getUser } from '../../services/userAPI';
 import Loading from '../Loading';
 import { UserType } from '../../types';
 import './profile.css';
+import UserContext from '../../context/UserContext';
 
 const imageDefault = '/src/images/user.png';
 
 export default function Profile() {
   const [loading, setLoading] = useState<boolean>(false);
   const [username, setUsername] = useState<UserType>();
+  const {user} = useContext(UserContext);
 
   useEffect(() => {
     const getInfo = async () => {
       setLoading(true);
-      const user = await getUser();
+      // const user = await getUser();
       setUsername(user);
       setLoading(false);
     };

@@ -83,7 +83,7 @@ export default function Search() {
               </div>
           ))}
       </div>
-      {loading && <Loading colors="#444444" />}
+      {loading && <Loading colors="#c0c0c0" />}
     </div>
   );
 }
